@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name — Business Intelligence Analyst</title>
+<meta name="description" content="Dashboards and analysis by Your Name, a business intelligence analyst working in Power BI, Tableau and Looker Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E8EAE4;
+    --surface:#FCFCFA;
+    --ink:#17201B;
+    --muted:#5A635C;
+    --pine:#14463B;
+    --rule:#C7CCC2;
+    --measure:64ch;
+  }
+
+  *{box-sizing:border-box}
+
+  html{-webkit-text-size-adjust:100%}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,"Times New Roman",serif;
+    font-size:1.0625rem;
+    line-height:1.65;
+    font-weight:400;
+  }
+
+  a{color:var(--pine);text-underline-offset:.18em;text-decoration-thickness:.06em}
+  a:hover{color:var(--ink)}
+  a:focus-visible{outline:2px solid var(--pine);outline-offset:3px;border-radius:2px}
+
+  .page{
+    max-width:1140px;
+    margin:0 auto;
+    padding:clamp(2rem,6vw,5.5rem) clamp(1.25rem,5vw,3rem) 4rem;
+    display:grid;
+    gap:clamp(2.5rem,5vw,4.5rem);
+  }
+
+  @media (min-width:60rem){
+    .page{grid-template-columns:19rem 1fr;align-items:start}
+    .rail{position:sticky;top:clamp(2rem,6vw,5.5rem)}
+  }
+
+  /* ---------- identity rail ---------- */
+
+  .name{
+    font-family:"Archivo",system-ui,sans-serif;
+    font-weight:700;
+    font-size:clamp(2.1rem,5vw,2.75rem);
+    line-height:1.02;
+    letter-spacing:-.025em;
+    margin:0 0 .6rem;
+  }
+
+  .role{
+    font-size:1.05rem;
+    color:var(--muted);
+    margin:0 0 1.6rem;
+    max-width:30ch;
+  }
+
+  .contact{list-style:none;margin:0;padding:0;font-family:"Archivo",system-ui,sans-serif;font-size:.95rem}
+  .contact li{padding:.42rem 0;border-top:1px solid var(--rule)}
+  .contact li:last-child{border-bottom:1px solid var(--rule)}
+  .contact a{text-decoration:none;display:block}
+  .contact a:hover{text-decoration:underline}
+
+  /* ---------- intro ---------- */
+
+  .intro{
+    font-size:clamp(1.25rem,2.4vw,1.55rem);
+    line-height:1.45;
+    max-width:var(--measure);
+    margin:0 0 clamp(2.5rem,5vw,3.5rem);
+    font-weight:300;
+  }
+
+  /* ---------- projects ---------- */
+
+  .work-heading{
+    font-family:"Archivo",system-ui,sans-serif;
+    font-size:.95rem;
+    font-weight:600;
+    color:var(--muted);
+    margin:0 0 1.25rem;
+    padding-bottom:.6rem;
+    border-bottom:1px solid var(--rule);
+  }
+
+  .project{
+    background:var(--surface);
+    border:1px solid var(--rule);
+    padding:clamp(1.4rem,3vw,2.1rem);
+    margin-bottom:1.1rem;
+  }
+
+  .question{
+    font-family:"Archivo",system-ui,sans-serif;
+    font-weight:600;
+    font-size:clamp(1.3rem,2.6vw,1.6rem);
+    line-height:1.2;
+    letter-spacing:-.015em;
+    margin:0 0 .85rem;
+    max-width:34ch;
+  }
+
+  .finding{margin:0 0 1.2rem;max-width:var(--measure)}
+
+  .facts{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.4rem 1.4rem;
+    margin:0 0 1.2rem;
+    font-family:"Archivo",system-ui,sans-serif;
+    font-size:.88rem;
+    color:var(--muted);
+  }
+  .facts div{display:flex;gap:.4rem}
+  .facts dt{font-weight:600;color:var(--ink)}
+  .facts dd{margin:0}
+
+  .open{
+    font-family:"Archivo",system-ui,sans-serif;
+    font-weight:600;
+    font-size:.95rem;
+    display:inline-block;
+    padding:.55rem .95rem;
+    background:var(--pine);
+    color:var(--surface);
+    text-decoration:none;
+  }
+  .open:hover{background:var(--ink);color:var(--surface)}
+
+  /* Optional: a live dashboard embedded directly in the page.
+     Keep at most one — a wall of iframes loads slowly. */
+  .embed{
+    margin-top:1.4rem;
+    border:1px solid var(--rule);
+    aspect-ratio:16/10;
+  }
+  .embed iframe{width:100%;height:100%;border:0;display:block}
+
+  footer{
+    margin-top:2.5rem;
+    padding-top:1.1rem;
+    border-top:1px solid var(--rule);
+    font-size:.9rem;
+    color:var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <aside class="rail">
+    <h1 class="name">Your Name</h1>
+    <p class="role">Business intelligence analyst. Power BI, Tableau, SQL.</p>
+    <ul class="contact">
+      <li><a href="mailto:you@example.com">you@example.com</a></li>
+      <li><a href="https://www.linkedin.com/in/yourhandle">LinkedIn</a></li>
+      <li><a href="https://public.tableau.com/app/profile/yourhandle">Tableau Public</a></li>
+      <li><a href="https://github.com/yourhandle">GitHub</a></li>
+      <li><a href="resume.pdf">Résumé (PDF)</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <p class="intro">
+      I build reporting that people actually open on Monday morning. Six years turning
+      messy operational data into dashboards that answer one clear question each.
+      Everything below is live — click through and use the filters.
+    </p>
+
+    <h2 class="work-heading">Selected dashboards</h2>
+
+    <!-- ======================================================================
+         PROJECT — copy this whole <article> block for each dashboard.
+         Write the heading as the business question, not the chart type.
+         ====================================================================== -->
+    <article class="project">
+      <h3 class="question">Which store regions are losing margin despite growing revenue?</h3>
+      <p class="finding">
+        Sales in the Southwest grew 14% year over year while contribution margin fell 3 points.
+        Splitting margin by product line and discount band showed the growth was almost entirely
+        promotional volume on two low-margin SKUs. The dashboard lets a regional manager filter
+        to their own stores and see the margin bridge behind the headline number.
+      </p>
+      <dl class="facts">
+        <div><dt>Built in</dt><dd>Tableau Public</dd></div>
+        <div><dt>Data</dt><dd>Superstore sample, 10k orders</dd></div>
+        <div><dt>Skills</dt><dd>LOD expressions, parameter actions</dd></div>
+      </dl>
+      <a class="open" href="https://public.tableau.com/views/your-viz-link">Open the dashboard</a>
+
+      <!-- Optional live embed. Paste the iframe from Tableau Public's Share button,
+           Looker Studio's File > Embed report, or Power BI's Publish to web, then
+           delete the surrounding comment markers.
+
+      <div class="embed">
+        <iframe src="PASTE_EMBED_URL_HERE" title="Regional margin dashboard" loading="lazy" allowfullscreen></iframe>
+      </div>
+
+      -->
+    </article>
+
+    <article class="project">
+      <h3 class="question">Where are patients dropping out of the referral pipeline?</h3>
+      <p class="finding">
+        A funnel view across five referral stages, with median days between stages. Two clinics
+        accounted for most of the drop-off, and the delay was concentrated in scheduling rather
+        than clinical review. Replace this with your own project and keep the same shape:
+        the question, what you found, and what someone can do with it.
+      </p>
+      <dl class="facts">
+        <div><dt>Built in</dt><dd>Power BI</dd></div>
+        <div><dt>Data</dt><dd>Synthetic EHR extract</dd></div>
+        <div><dt>Skills</dt><dd>DAX time intelligence, drillthrough</dd></div>
+      </dl>
+      <a class="open" href="https://example.com/your-report">Open the dashboard</a>
+    </article>
+
+    <article class="project">
+      <h3 class="question">Did the pricing change move subscription churn?</h3>
+      <p class="finding">
+        Cohort retention curves before and after the April price increase, with a control group
+        on legacy pricing. Churn rose for monthly plans only. If a dashboard can't be shared
+        as a live link — a Power BI report, say — link a short walkthrough video here instead
+        and say so plainly.
+      </p>
+      <dl class="facts">
+        <div><dt>Built in</dt><dd>Looker Studio</dd></div>
+        <div><dt>Data</dt><dd>Public SaaS metrics set</dd></div>
+        <div><dt>Skills</dt><dd>Blended sources, cohort tables</dd></div>
+      </dl>
+      <a class="open" href="https://lookerstudio.google.com/your-report">Open the dashboard</a>
+    </article>
+
+    <footer>
+      <p>Built with GitHub Pages. Sample data only — no employer data is used anywhere on this site.</p>
+    </footer>
+  </main>
+
+</div>
+
+</body>
+</html>
